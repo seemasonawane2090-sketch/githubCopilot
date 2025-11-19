@@ -156,25 +156,53 @@ footer {
   color: #333;
 }
 
-/* Bulleted list that remains pretty */
+/* Participants list: render as clean chips and hide default bullets */
 .participants-list {
-  list-style: disc inside;
+  list-style: none; /* hide bullets */
   margin: 0;
-  padding-left: 0;
-  margin-top: 6px;
+  padding: 6px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .participant-item {
-  display: list-item; /* keep marker visible */
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
   border: 1px solid #e6e9ee;
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.9rem;
   color: #1a237e;
-  margin-bottom: 6px;
-  margin-left: 6px; /* give a little spacing from the bullet */
-  list-style-position: inside;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.participant-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* delete button (small circular icon) */
+.delete-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.delete-participant:hover {
+  background-color: rgba(198, 40, 40, 0.08);
+  color: #b71c1c;
 }
 
 /* small note when no participants */
