@@ -142,3 +142,44 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Participants section styling */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.participants-section h5 {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Bulleted list that remains pretty */
+.participants-list {
+  list-style: disc inside;
+  margin: 0;
+  padding-left: 0;
+  margin-top: 6px;
+}
+
+.participant-item {
+  display: list-item; /* keep marker visible */
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid #e6e9ee;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #1a237e;
+  margin-bottom: 6px;
+  margin-left: 6px; /* give a little spacing from the bullet */
+  list-style-position: inside;
+}
+
+/* small note when no participants */
+.no-participants {
+  font-style: italic;
+  color: #666;
+  margin: 0;
+}
